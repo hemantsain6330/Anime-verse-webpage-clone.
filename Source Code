@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnimeVerse</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+color:white;
+overflow-x:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+top:0;
+}
+
+nav h2{
+color:#00f7ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00f7ff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+flex-direction:column;
+}
+
+.hero h1{
+font-size:65px;
+animation:fade 2s;
+}
+
+.hero span{
+color:#00f7ff;
+}
+
+.hero p{
+margin:20px;
+font-size:20px;
+max-width:700px;
+}
+
+.btn{
+padding:15px 35px;
+background:#00f7ff;
+color:black;
+border:none;
+border-radius:40px;
+cursor:pointer;
+font-size:18px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px cyan;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(80px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding:80px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+transition:.4s;
+backdrop-filter:blur(10px);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px cyan;
+}
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:50px;
+background:rgba(0,0,0,.3);
+}
+
+.circle{
+position:fixed;
+width:15px;
+height:15px;
+border-radius:50%;
+background:cyan;
+pointer-events:none;
+box-shadow:0 0 15px cyan;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>AnimeVerse</h2>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#">Characters</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>Welcome To <span>AnimeVerse</span></h1>
+
+<p>
+Professional Animated Website Design for GitHub Portfolio.
+Modern UI • Glassmorphism • Smooth Animation
+</p>
+
+<button class="btn">
+Explore Now
+</button>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+
+<h2>Naruto</h2>
+
+<p>
+Power, determination and ninja journey.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>One Piece</h2>
+
+<p>
+Adventure across the Grand Line.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Demon Slayer</h2>
+
+<p>
+Beautiful visuals with stylish effects.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+©2026 AnimeVerse | Designed By Hemant
+
+</footer>
+
+<div class="circle" id="cursor"></div>
+
+<script>
+
+const c=document.getElementById("cursor");
+
+document.addEventListener("mousemove",(e)=>{
+
+c.style.left=e.clientX+"px";
+c.style.top=e.clientY+"px";
+
+});
+
+</script>
+
+</body>
+
+</html>
